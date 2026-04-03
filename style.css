@@ -1,0 +1,280 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #020436;
+  color: #e2e8f0;
+}
+
+.container {
+  max-width: 1180px;
+  margin: 6.5rem auto 2rem;
+  padding: 0 1rem;
+}
+
+h1 {
+  text-align: center;
+}
+
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  width: 100%;
+  margin: 0;
+  border-radius: 0;
+  border-left: 0;
+  border-right: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tab-button {
+  flex: 1 1 220px;
+  margin: 0;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #ffffff;
+  border-radius: 8px;
+  background: #020436;
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.tab-button:hover {
+  background: #1e293b;
+}
+
+.tab-button.active {
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+.tab-panel {
+  display: none;
+}
+
+.tab-panel.active {
+  display: block;
+}
+
+.card {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+}
+
+.settings-box {
+  border: 1px solid #334155;
+  border-radius: 10px;
+  padding: 0.8rem;
+  margin-bottom: 0.9rem;
+  background: #0f172a;
+}
+
+.settings-box h3 {
+  margin: 0 0 0.7rem;
+  font-size: 1rem;
+}
+
+.settings-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 0.7rem;
+}
+
+.factor-field {
+  margin-bottom: 0;
+  min-width: 0;
+}
+
+input {
+  width: 100%;
+  margin-top: 0.35rem;
+  padding: 0.55rem;
+  border-radius: 8px;
+  border: 1px solid #475569;
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+select {
+  width: 100%;
+  margin-top: 0.35rem;
+  padding: 0.55rem;
+  border-radius: 8px;
+  border: 1px solid #475569;
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+#simulator-form button {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.65rem;
+  border: 0;
+  border-radius: 8px;
+  background: #22c55e;
+  color: #052e16;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+#simulator-form button:hover {
+  background: #16a34a;
+}
+
+.score {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.narration-box {
+  margin: 0.8rem 0 1rem;
+  padding: 0.75rem;
+  border: 1px solid #475569;
+  border-radius: 8px;
+  background: #0f172a;
+}
+
+.narration-box h3 {
+  margin: 0 0 0.5rem;
+}
+
+#narrationText {
+  margin: 0;
+  color: #dbeafe;
+  min-height: 2.2rem;
+}
+
+.section-note {
+  margin-top: 0;
+  color: #94a3b8;
+}
+
+ul {
+  margin: 0;
+  padding-left: 1rem;
+}
+
+ol {
+  margin: 0;
+  padding-left: 1.4rem;
+}
+
+.nation {
+  border: 1px solid #334155;
+  border-radius: 8px;
+  margin-bottom: 0.6rem;
+  background: #0f172a;
+}
+
+.nation summary {
+  cursor: pointer;
+  padding: 0.6rem 0.75rem;
+  font-weight: 700;
+}
+
+.nation ul {
+  padding: 0 1.8rem 0.8rem 2rem;
+}
+
+.league-button {
+  width: 100%;
+  text-align: left;
+  padding: 0.45rem 0.6rem;
+  border: 1px solid #ffffff;
+  border-radius: 6px;
+  background: #020436;
+  color: #ffffff;
+  cursor: pointer;
+  margin-bottom: 0.35rem;
+}
+
+.league-button:hover {
+  background: #1e293b;
+}
+
+.clubs-panel {
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #334155;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 720px) {
+  .settings-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .settings-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Match stats layout and outlines */
+.stats-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.6rem;
+}
+
+.stat-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #475569;
+  padding: 0.6rem;
+  border-radius: 8px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));
+}
+
+.stat-label {
+  color: #cbd5e1;
+  font-weight: 700;
+  flex: 1 1 auto;
+}
+
+.stat-value {
+  min-width: 140px;
+  text-align: center;
+  font-weight: 700;
+  color: #e2e8f0;
+}
+
+.stat-teams {
+  min-width: 200px;
+  text-align: center;
+  font-weight: 700;
+  color: #e2e8f0;
+}
+
+@media (max-width: 520px) {
+  .stat-row {
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+  .stat-value {
+    min-width: 120px;
+  }
+}
