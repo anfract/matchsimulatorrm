@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Match Result - Football Match Simulator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="card">
+      <button id="backButton" type="button">⟵ Return to menu</button>
+    </header>
+
+    <section id="result" class="card" aria-live="polite">
+      <h2 id="fixture">Fixture</h2>
+      <p id="scoreline" class="score">0'  |  0 - 0</p>
+      <section class="narration-box">
+        <h3>Live Commentary</h3>
+        <p id="narrationText">Waiting for match action...</p>
+      </section>
+
+      <h3>Match Events</h3>
+      <ul id="events"></ul>
+      <section id="match-stats" class="card hidden">
+        <h3>Match Statistics</h3>
+        <div class="stats-grid">
+          <div class="stat-row stat-head">
+            <div class="stat-label"></div>
+            <div id="stat-teams" class="stat-teams">Home - Away</div>
+          </div>
+
+          <div class="stat-row">
+            <div class="stat-label">Possession</div>
+            <div id="stat-possession" class="stat-value">-</div>
+          </div>
+
+          <div class="stat-row">
+            <div class="stat-label">Shots</div>
+            <div id="stat-shots" class="stat-value">-</div>
+          </div>
+
+          <div class="stat-row">
+            <div class="stat-label">Shots On Target</div>
+            <div id="stat-sot" class="stat-value">-</div>
+          </div>
+
+          <div class="stat-row">
+            <div class="stat-label">Fouls</div>
+            <div id="stat-fouls" class="stat-value">-</div>
+          </div>
+
+          <div class="stat-row">
+            <div class="stat-label">Corners</div>
+            <div id="stat-corners" class="stat-value">-</div>
+          </div>
+
+          <div class="stat-row">
+            <div class="stat-label">Match xG</div>
+            <div id="stat-xg" class="stat-value">-</div>
+          </div>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script src="result.js"></script>
+</body>
+</html>
